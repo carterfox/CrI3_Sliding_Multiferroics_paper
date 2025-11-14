@@ -1,0 +1,54 @@
+system = CrI3
+
+# Procedures
+PREC        = Accurate
+IALGO       = 38
+GGA_COMPAT = .FALSE.
+
+#Electronic
+ENCUT       = 500
+EDIFF       = 1E-6
+NELM        = 100
+ISMEAR      = 1
+SIGMA       = 0.05
+NELMIN      = 5
+LWAVE       = .FALSE.
+
+#Paralelization
+NCORE       = 16
+KPAR        = 8
+LREAL       = Auto
+AMIN        = 0.01
+
+#Relaxing process
+IBRION      = 2
+ISIF        = 2
+NSW         = 200
+EDIFFG      = -1E-4
+
+#Dipole Moment
+IDIPOL      = 3 
+LDIPOL      = .TRUE.
+
+#Magnetic properties
+ISPIN       = 2
+MAGMOM      = 5 5 -5 -5 5 5 -5 -5 24*0  
+LMAXMIX     = 4
+LORBIT      = 11
+AMIX        = 0.1
+BMIX        = 0.01
+AMIX_MAG    = 0.2
+BMIX_MAG    = 0.01  
+
+
+#DFT+U
+LDAU        = .TRUE.
+LDAUTYPE    = 2
+LDAUL       = 2 -1
+LDAUU       = 3 0
+
+#Van der Waals interaction, GRIMME
+IVDW        = 11
+LASPH       = .TRUE.
+
+	
